@@ -8,6 +8,7 @@ namespace AutoSavePI4.Entidades
 {
     public class Empresa
     {
+        [Key]
         public long Codigo { get; set; }
         public string? Nome { get; set; }
         public string? CNPJ { get; set; }

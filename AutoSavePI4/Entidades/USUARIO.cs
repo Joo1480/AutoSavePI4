@@ -21,7 +21,7 @@ namespace AutoSavePI4.Entidades
         public string? Contato { get; set; }
         public string? Email { get; set; }
         public string? Senha { get; set; }
-        public decimal? SeqTipoCaminhao { get; set; }
+        public long? SeqTipoCaminhao { get; set; }
         public Caminhao? SeqCaminhao { get; set; }
     }
 }
