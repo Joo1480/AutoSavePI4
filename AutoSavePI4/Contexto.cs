@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using sistema.Entidades;
+using AutoSavePI4.Entidades;
 
 namespace AutoSavePI4
 {
@@ -12,4 +12,4 @@ namespace AutoSavePI4
         public DbSet<Usuario> USUARIO { get; set; }
     }
 }
-}
+

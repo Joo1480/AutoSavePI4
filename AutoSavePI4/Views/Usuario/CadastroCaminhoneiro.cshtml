@@ -1,7 +1,7 @@
 ﻿@{
     Layout = null;
 }
-
+@model AutoSavePI4.Entidades.Usuario
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,60 +26,44 @@
         <p>Cadastre-se para conseguir os melhores fretes para seu caminhão</p>
     </div>
     
-
+    
+<form action="Salvar" method="post">
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-5">
                 <div class="esquerdo">
-                    <form id="myForm" onsubmit="return validarFormulario()">
                         <div class="mb-3">
                             <label for="inputPassword" class="form-label">Nome completo</label>
-                            <input id="nome" style="background-color: #D9D9D9; width: 100%;" placeholder="Carlos Pereira" type="text" class="form-control"  required>
+                            <input id="Nome" name="Nome" style="background-color: #D9D9D9; width: 100%;" placeholder="Carlos Pereira" type="text" class="form-control" required>
                             
                         </div>
                         <div class="mb-3">
                             <label for="inputPassword" class="form-label">Email</label>
-                            <input id="email" style="background-color: #D9D9D9; width: 100%;" placeholder="autosavefretes@gmail.com" type="text" class="form-control"required >
+                            <input id="Email" name="Email" style="background-color: #D9D9D9; width: 100%;" placeholder="autosavefretes@gmail.com" type="text" class="form-control"required >
                         </div>
-                        
-                    </form>
                 </div>
                 <div class="esquerdo">
-                    <form>
-                        
-                    </form>
+                    
                 </div>
                 <div class="esquerdo">
-                    <form>
+                    
                         <div class="mb-3">
                             <label for="inputPassword" class="form-label">Senha</label>
-                            <input id="senha" style="background-color: #D9D9D9; width: 100%;" placeholder="**********" type="text" class="form-control" >
+                            <input id="Senha" name="Senha" style="background-color: #D9D9D9; width: 100%;" placeholder="**********" type="text" class="form-control">
                         </div>
-                    </form>
+                    
                 </div>
                 <div class="esquerdo">
-                    <form>
                         <div class="mb-3">
                             <label for="inputPassword" class="form-label">CPF</label>
-                            <input style="background-color: #D9D9D9; width: 100%;" placeholder="123.456.789-12" type="text" class="form-control" >
+                            <input id="CPFCNPJ" name="CPFCNPJ" style="background-color: #D9D9D9; width: 100%;" placeholder="123.456.789-12" type="text" class="form-control">
                         </div>
-                    </form>
                 </div>
                 <div class="esquerdo">
-                    <form>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Sexo</label>
-                            <input style="background-color: #D9D9D9; width: 100%;" placeholder="" type="text" class="form-control" >
+                            <label for="inputPassword" class="form-label">Contato</label>
+                            <input id="Contato" name="Contato" style="background-color: #D9D9D9; width: 100%;" placeholder="(99)9999-9999" type="text" class="form-control">
                         </div>
-                    </form>
-                </div>
-                <div class="esquerdo">
-                    <form>
-                        <div class="mb-3">
-                            <label for="inputPassword" class="form-label">Telefone</label>
-                            <input style="background-color: #D9D9D9; width: 100%;" placeholder="(99)9999-9999" type="text" class="form-control" >
-                        </div>
-                    </form>
                 </div>
             </div>
     
@@ -89,62 +73,50 @@
     
             <div class="col-md-5">
                 <div class="direito">
-                    <form>
                         <div class="mb-3">
                             <label for="inputPassword" class="form-label">Cidade Residencial</label>
-                            <input style="background-color: #D9D9D9;" placeholder="Matão - SP" type="text" class="form-control" >
+                            <input id="Cidade" name="Cidade" style="background-color: #D9D9D9;" placeholder="Matão - SP" type="text" class="form-control">
                         </div>
-                    </form>
                 </div>
                 <div class="direito">
-                    <form>
                         <div class="mb-3">
                             <label for="inputPassword" class="form-label">Num CNH</label>
-                            <input style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control" >
+                            <input id="NumCNH" name="NumCNH" style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control">
                         </div>
-                    </form>
                 </div>
                 <div class="direito">
-                    <form>
                         <div class="mb-3">
                             <label for="inputPassword" class="form-label">Categoria CNH</label>
-                            <input style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control" >
+                            <input id="CategoriaCNH" name="CategoriaCNH" style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control">
                         </div>
-                    </form>
                 </div>
                 <div class="direito">
-                    <form>
                         <div class="mb-3">
                             <label for="inputPassword" class="form-label">Cod CNH</label>
-                            <input style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control">
+                            <input id="CodSegurancaCNH" name="CodSegurancaCNH" style="background-color: #D9D9D9;" placeholder="" type="text" class="form-control">
                         </div>
-                    </form>
                 </div>
                 <div class="direito">
-                    <form>
                         <div class="mb-3">
                             <label for="inputPassword" class="form-label">Data de Emissão</label>
-                            <input style="background-color: #D9D9D9; " placeholder="ex: 15/12/22" type="text" class="form-control" >
+                            <input id="DataEmissaoCNH" name="DataEmissaoCNH" style="background-color: #D9D9D9; " placeholder="ex: 15/12/22" type="text" class="form-control">
                         </div>
-                    </form>
                 </div>
                 <div class="direito">
-                    <form>
                         <div class="mb-3">
                             <label for="inputPassword" class="form-label">Estado Expeditor</label>
-                            <input style="background-color: #D9D9D9;" placeholder="SP" type="text" class="form-control" >
+                            <input id="EstadoEmissorCNH" name="EstadoEmissorCNH" style="background-color: #D9D9D9;" placeholder="SP" type="text" class="form-control">
                         </div>
-                    </form>
                 </div>
                 
             </div>
         </div>
         <div style="text-align: right;" class="col text-right">
-            <a href="/Usuario/CadastroVeiculo" style="text-align: center; align-items: center;" type="submit"  class=" botao btn btn-primary" >Cadastrar</a> 
-            
-        </div>
-    </div>
+                <input type="submit" style="text-align: center; align-items: center;" class=" botao btn btn-primary" value="Cadastrar">
 
+            </div>
+    </div>
+</form>
 <script>
     function validarFormulario() {
     var nome = document.getElementById("nome").value;

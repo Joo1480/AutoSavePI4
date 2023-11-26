@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace sistema.Entidades
+namespace AutoSavePI4.Entidades
 {
     public class Empresa
     {

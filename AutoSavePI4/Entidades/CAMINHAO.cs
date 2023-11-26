@@ -1,7 +1,10 @@
-﻿namespace sistema.Entidades
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AutoSavePI4.Entidades
 {
     public class Caminhao
     {
+        [Key]
         public long Codigo { get; set; }
         public string? Placa { get; set; }
         public bool Bitrem { get; set; }

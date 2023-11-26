@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace sistema.Entidades
+namespace AutoSavePI4.Entidades
 {
     public class Fretes
     {
