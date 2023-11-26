@@ -30,7 +30,7 @@ namespace AutoSavePI4.Controllers
                     novo = collection;
                     contexto.USUARIO.Add(novo);
                     contexto.SaveChanges();
-                    return RedirectToAction("Index");
+                    return RedirectToAction("CadastroVeiculo");
                 }
                 else
                 {
@@ -38,7 +38,7 @@ namespace AutoSavePI4.Controllers
                     {
                         contexto.USUARIO.Update(collection);
                         contexto.SaveChanges();
-                        return RedirectToAction(nameof(CadastroVeiculo));
+                        return RedirectToAction(nameof(Index));
                     }
                     else
                     {
