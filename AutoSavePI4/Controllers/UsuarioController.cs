@@ -38,7 +38,7 @@ namespace AutoSavePI4.Controllers
                     {
                         contexto.USUARIO.Update(collection);
                         contexto.SaveChanges();
-                        return RedirectToAction(nameof(Index));
+                        return RedirectToAction(nameof(CadastroVeiculo));
                     }
                     else
                     {

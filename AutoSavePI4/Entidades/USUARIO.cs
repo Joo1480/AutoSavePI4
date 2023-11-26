@@ -17,11 +17,10 @@ namespace AutoSavePI4.Entidades
         public string? CategoriaCNH { get; set; }
         public string? CodSegurancaCNH { get; set; }
         public DateTime DataEmissaoCNH { get; set; }
-        public string? EstadoEmissorCNH { get; set; }
+        public string? EstadoExpeditorCNH { get; set; }
         public string? Contato { get; set; }
         public string? Email { get; set; }
         public string? Senha { get; set; }
         public long? SeqTipoCaminhao { get; set; }
-        public Caminhao? SeqCaminhao { get; set; }
     }
 }
