@@ -16,6 +16,13 @@
         <div class="row">
             <!-- Coluna do formulário de login -->
             <div class="col-md-6 d-flex justify-content-center align-items-center">
+                @if (TempData["erro"] != null)
+                {
+                    <div class="alert alert-danger">
+                        @TempData["erro"]
+                    </div>
+
+                }
                 <form action="/Login/Entrar" method="post">
                     <div class="mb-3">
                         <h1 class="text-center"><span style="color: #FF7A00;">Mooby</span> Fretes</h1>
@@ -25,7 +32,7 @@
                         <div class="mb-3">
                             <label for="inputEmail" class="col-sm-2 col-form-label fs-5">Email</label>
                             <div class="col-sm-12">
-                                <input style="--bs-focus-ring-color: rgba(255, 122, 0, .25);" placeholder="Ex: autosave@gmail.com" type="email" name="email" class="form-control rounded-0 focus-ring" id="email">
+                                <input style="--bs-focus-ring-color: rgba(255, 122, 0, .25);" placeholder="Ex: autosave@gmail.com" name="email" class="form-control rounded-0 focus-ring" id="email">
                             </div>
                         </div>
                         <div class="row">
@@ -35,7 +42,11 @@
                             </div>
                         </div>
                     </div>
-                    <div></div>
+                    <br />
+                    <div class="text-center">
+                        <input style="width: 150px; background-color: #FF7A00;" type="submit" value="Entrar" class="btn btn-primary border border-0 rounded-0">
+                    </div>
+                    <br />
                     <div class="">
                         <div class="text-center">
                             <p class="m-0 fs-4">Não possui conta?</p>
