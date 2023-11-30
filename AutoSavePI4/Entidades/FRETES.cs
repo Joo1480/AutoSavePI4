@@ -21,8 +21,6 @@ namespace AutoSavePI4.Entidades
         public decimal? ValorPagamento { get; set; }
         public int? SeqEmpresa { get; set; }
         public int? SeqUsuario { get; set; }
-        public Empresa? Empresa { get; set; }
-        public Usuario? Usuario { get; set; }
 
     }
 }

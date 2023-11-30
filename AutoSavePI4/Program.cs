@@ -9,6 +9,12 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Contexto>
     (options => options.UseSqlServer("Server=(localdb)\\localhost;Database=MoobyFretes;"));
 
+builder.Services.AddAuthentication("CookieAuthentication").AddCookie("CookieAuthentication", option =>
+{
+    option.LoginPath = "/Login/Index";
+    option.LoginPath = "/Login/ops";
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,6 +30,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

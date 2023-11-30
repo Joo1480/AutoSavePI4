@@ -1,10 +1,12 @@
 ﻿using AutoSavePI4.Entidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AutoSavePI4.Controllers
 {
+    [Authorize(AuthenticationSchemes = "CookieAuthentication")]
     public class FretesController : Controller
-    {
+    {        
         private readonly Contexto contexto;
 
         public FretesController(Contexto contexto)
