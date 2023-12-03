@@ -26,7 +26,7 @@ namespace AutoSavePI4.Controllers
                     novo = collection;
                     contexto.EMPRESA.Add(collection);
                     contexto.SaveChanges();
-                    return RedirectToAction("Index", "Fretes");
+                    return RedirectToAction("Index", "Login");
                 }
                 else
                 {

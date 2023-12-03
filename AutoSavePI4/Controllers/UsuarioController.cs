@@ -52,5 +52,39 @@ namespace AutoSavePI4.Controllers
                 return View();
             }
         }
+
+        [HttpPost]
+        public IActionResult SalvarCaminhao(Caminhao collection)
+        {
+            try
+            {
+                if (collection.Codigo == 0)
+                {
+                    Caminhao novo = new Caminhao();
+                    novo = collection;
+                    contexto.CAMINHAO.Add(novo);
+                    contexto.SaveChanges();
+                    return RedirectToAction("Index", "Login");
+                }
+                else
+                {
+                    if (ModelState.IsValid)
+                    {
+                        contexto.CAMINHAO.Update(collection);
+                        contexto.SaveChanges();
+                        return RedirectToAction("Fretes/Index");
+                    }
+                    else
+                    {
+                        return View(collection);
+                    }
+                }
+
+            }
+            catch
+            {
+                return View();
+            }
+        }
     }
 }

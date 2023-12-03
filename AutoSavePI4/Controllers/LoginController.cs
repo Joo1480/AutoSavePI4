@@ -32,7 +32,7 @@ namespace AutoSavePI4.Controllers
                 if (empresaLogado == null)
                 {
                     TempData["erro"] = "Usuário e/ou senha inválidos";
-                    return View();
+                    return View("Index");
                 }
                 else
                 {
