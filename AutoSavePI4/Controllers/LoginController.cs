@@ -60,7 +60,7 @@ namespace AutoSavePI4.Controllers
         public async Task<IActionResult> Logoff()
         {
             await HttpContext.SignOutAsync("CookieAuthentication");
-            return Redirect("Login/Index");
+            return Redirect("Index");
         }
     }
 }
