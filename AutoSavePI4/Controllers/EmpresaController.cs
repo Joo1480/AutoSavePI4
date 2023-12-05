@@ -48,5 +48,9 @@ namespace AutoSavePI4.Controllers
                 return View();
             }
         }
+        public IActionResult Editar(int cod)
+        {
+            return View("CadastroEmpresa", contexto.EMPRESA.Where(a => a.Codigo == cod).FirstOrDefault());
+        }
     }
 }

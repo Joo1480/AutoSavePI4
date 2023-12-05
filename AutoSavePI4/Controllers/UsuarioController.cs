@@ -86,5 +86,9 @@ namespace AutoSavePI4.Controllers
                 return View();
             }
         }
+        public IActionResult Editar(int cod)
+        {
+            return View("CadastroCaminhoneiro", contexto.USUARIO.Where(a => a.Codigo == cod).FirstOrDefault());
+        }
     }
 }

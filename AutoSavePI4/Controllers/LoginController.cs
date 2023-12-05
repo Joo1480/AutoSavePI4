@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using Microsoft.AspNet.Identity;
 
 namespace AutoSavePI4.Controllers
 {
@@ -48,17 +49,19 @@ namespace AutoSavePI4.Controllers
                 claims.Add(new Claim(ClaimTypes.Sid, usuarioLogado.Codigo.ToString()));
             }
 
-
             var userIdentity = new ClaimsIdentity(claims, "Acesso");
 
             ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
             await HttpContext.SignInAsync("CookieAuthentication", principal, new AuthenticationProperties());
 
+            
+
             return Redirect("/Fretes/index");
         }
-
+        
         public async Task<IActionResult> Logoff()
         {
+            
             await HttpContext.SignOutAsync("CookieAuthentication");
             return Redirect("Index");
         }
